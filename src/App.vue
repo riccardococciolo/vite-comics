@@ -6,16 +6,18 @@ import ProductList from './components/ProductList.vue';
 
 export default {
     components: {
-        AppHeader,
-        AppFooter,
-        ProductList,
-    },
+    AppHeader,
+    AppFooter,
+    ProductList,
+    ProductList
+},
 };
 
 </script>
 
 <template>
     <AppHeader />
+    <ProductList />
 </template>
 
 <style lang="scss">

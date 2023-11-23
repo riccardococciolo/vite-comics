@@ -80,9 +80,9 @@ export default {
                             content: "";
                             position: absolute;
                             left: 0;
-                            bottom: -3px;
+                            bottom: -39.5px;
                             width: 100%;
-                            height: 2px;
+                            height: 4px;
                             background-color: $primary;
                         }
                     }
