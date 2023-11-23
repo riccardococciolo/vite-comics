@@ -72,6 +72,20 @@ export default {
                 a {
                     text-decoration: none;
                     color: black;
+                    position: relative;
+
+                    &:hover {
+                        color: $primary;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -3px;
+                            width: 100%;
+                            height: 2px;
+                            background-color: $primary;
+                        }
+                    }
                 }
             }
         }
