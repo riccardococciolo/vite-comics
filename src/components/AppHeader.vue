@@ -40,8 +40,8 @@ export default {
 </script>
 
 <template>
-    <div>
-        <img src="" alt="">
+    <div class="container">
+        <img src="../assets/img/dc-logo.png" alt="">
         <ul>
             <li v-for="(item, index) in navItems">
                 <a href="">{{ item.title }}</a>
@@ -51,5 +51,32 @@ export default {
 </template>
 
 <style scoped lang="scss">
+    @use '../style/partials/mixin' as *;
+    @use '../style/partials/variables' as *;
+
+    .container {
+        @include flex(row, space-between);
+
+        img {
+            padding: 1rem;
+            width: 100px;
+        }
+
+        ul {
+            list-style: none;
+            @include flex();
+            gap: 1.5rem;
+            font-size: 1.2rem;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+
+
     
 </style>
