@@ -44,6 +44,34 @@ export default {
 
 .wrapper {
     background-image: url(../assets/img/footer-bg.jpg);
+    background-size: cover;
     width: 100%;
+    position: relative;
+    .container {
+        padding: 2rem;
+        @include flex(row, left, start);
+        gap: 1rem;
+        color: white;
+        ul {
+            list-style: none;
+            padding: 1rem 0;
+            
+            li {
+                padding: 0.2rem 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: rgb(112, 112, 112);
+            }
+        }
+    }
+    &::after {
+        content: url(../assets/img/dc-logo-bg.png);
+        position: absolute;
+        top: -100px;
+        right: 100px;
+        z-index: 0;
+    }
 }
 </style>

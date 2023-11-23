@@ -22,6 +22,8 @@ export default {
 
 .wrapper {
     background-color: black;
+    z-index: 3;
+    position: relative;
 }
 .container {
     padding: 4rem;
