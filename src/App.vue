@@ -9,7 +9,8 @@ export default {
     AppHeader,
     AppFooter,
     ProductList,
-    ProductList
+    ProductList,
+    AppFooter
 },
 };
 
@@ -18,6 +19,7 @@ export default {
 <template>
     <AppHeader />
     <ProductList />
+    <AppFooter />
 </template>
 
 <style lang="scss">
