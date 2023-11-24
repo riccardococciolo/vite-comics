@@ -22,11 +22,14 @@ export default {
         height: 100%;
         img {
             width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: top;
         }
         
         span {
-            text-align: center;
-            font-size: 1.3rem;
+            display: inline-block;
+            padding-top: 1rem;
         }
     }
     
