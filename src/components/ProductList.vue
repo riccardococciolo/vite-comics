@@ -97,7 +97,7 @@ export default {
             </div>
             <div>
                 <span class="button">
-                    <a href=""></a>
+                    <a href="">load more</a>
                 </span>
             </div>
         </div>
@@ -107,6 +107,7 @@ export default {
 <style lang="scss" scoped>
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
+
 .wrapper {
     background-image: url(../assets/img/jumbotron.jpg);
     height: 400px;
@@ -117,13 +118,50 @@ export default {
 .product-wrapper {
     background-color: rgb(46, 46, 46);
     padding: 3rem;
-    .row {
-        @include flex(row, center, stretch, wrap);
+
+    .container {
+        @include flex(row, center, center, wrap);
         gap: 2rem;
-        .col {
-            width: calc(100% / 6 - 3rem);
-            color: white;
+
+        position: relative;
+
+        .row {
+            @include flex(row, center, stretch, wrap);
+            gap: 2rem;
+
+            .col {
+                width: calc(100% / 6 - 3rem);
+                color: white;
+            }
+
+            ;
+
+            &::after {
+                content: "current series";
+                padding: .5rem 1rem;
+                background-color: $primary;
+                color: white;
+                position: absolute;
+                font-size: 2rem;
+                top: -75px;
+                left: 50px;
+            }
         }
+
+        ;
+
+        .button {
+            display: inline-block;
+            padding: .5rem 2.5rem;
+            background-color: $primary;
+            color: white;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+
+        ;
     }
-}
-</style>
+}</style>
